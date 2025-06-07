@@ -22,14 +22,18 @@ function generirajDane() {
 
     for (let i = 1; i <= brojDana; i++) {
         const datum = new Date(godina, mjesec - 1, i);
-        const iso = datum.toISOString().split("T")[0];
-        const mmdd = iso.slice(5);
         const dan = datum.toLocaleDateString("hr-HR", { weekday: "long" });
+
+        const mm = String(datum.getMonth() + 1).padStart(2, "0");
+        const dd = String(datum.getDate()).padStart(2, "0");
+        const mmdd = `${mm}-${dd}`;
+
         const vrsta = blagdani.includes(mmdd)
             ? "Blagdan"
             : datum.getDay() === 0
             ? "Nedjelja"
             : "Radni dan";
+
         const tr = document.createElement("tr");
         tr.className = vrsta === "Blagdan" ? "blagdan" : vrsta === "Nedjelja" ? "nedjelja" : "";
         tr.innerHTML = `
@@ -43,6 +47,7 @@ function generirajDane() {
         tbody.appendChild(tr);
     }
 }
+
 
 function izracunajSatnicu(smjena, vrsta) {
     if (smjena === "N") return 12;
