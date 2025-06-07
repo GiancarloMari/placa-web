@@ -1,0 +1,54 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+}
+h1 {
+    text-align: center;
+}
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+.controls select, .controls button {
+    padding: 8px 12px;
+    font-size: 16px;
+}
+.output {
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr.blagdan {
+    background-color: #ffcccc;
+}
+tr.nedjelja {
+    background-color: #cce5ff;
+}
+#rezultat {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}

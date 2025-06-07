@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hr">
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obračun Plaće</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Obračun Plaće</h1>
+        <div class="controls">
+            <label for="mjesec">Mjesec:</label>
+            <select id="mjesec"></select>
+            <label for="godina">Godina:</label>
+            <select id="godina">
+                <option value="2024">2024</option>
+                <option value="2025" selected>2025</option>
+                <option value="2026">2026</option>
+            </select>
+            <button onclick="generirajDane()">Generiraj dane</button>
+            <button onclick="izracunajPlacu()">Izračunaj</button>
+            <button onclick="spremiPlacu()">Spremi</button>
+        </div>
+        <div class="output">
+            <table id="tabela">
+                <thead>
+                    <tr>
+                        <th>Datum</th>
+                        <th>Dan</th>
+                        <th>Vrsta dana</th>
+                        <th>Smjena (U/P/N)</th>
+                        <th>Satnica</th>
+                        <th>Zarada</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <p id="rezultat">Ukupna plaća: 0.00 EUR</p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
